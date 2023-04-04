@@ -1,0 +1,14 @@
+<div>
+  <button>Agregar</button>
+</div>
+<hr />
+<p *ngFor="let company of companies">
+  <li>{{ company.id }}</li>
+  <li>{{ company.name }}</li>
+  <li>{{ company.description }}</li>
+  <li>{{ company.phone }}</li>
+  <span>
+    <button>Editar</button>
+    <button>Eliminar</button>
+  </span>
+</p>
