@@ -5,7 +5,7 @@ export interface CompanyResponse {
 }
 
 export interface Company {
-  id: number;
+  id?: number;
   name: string;
   description: string;
   phone: string;

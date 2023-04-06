@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CompanyResponse } from '../interfaces/company';
+import { Company, CompanyResponse } from '../interfaces/company';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,11 @@ export class CompanyService {
 
   constructor(private http: HttpClient) {}
 
-  getAllCompanies(): Observable<CompanyResponse> {
+  getCompaniesSvc(): Observable<CompanyResponse> {
     return this.http.get<CompanyResponse>(`${this.API_URL}`);
+  }
+
+  deleteCompanySvc(id: number): Observable<Company> {
+    return this.http.delete<Company>(`${this.API_URL}/${id}`);
   }
 }

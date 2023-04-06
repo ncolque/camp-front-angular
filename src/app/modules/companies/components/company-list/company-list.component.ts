@@ -18,9 +18,15 @@ export class CompanyListComponent implements OnInit {
 
   listCompanies() {
     return this.companiesSvc
-      .getAllCompanies()
+      .getCompaniesSvc()
       .subscribe((data: CompanyResponse) => {
         this.companies = data.data;
       });
+  }
+
+  deleteCompany(id: number) {
+    return this.companiesSvc.deleteCompanySvc(id).subscribe((resp) => {
+      this.listCompanies();
+    });
   }
 }
