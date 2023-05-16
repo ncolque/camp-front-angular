@@ -9,6 +9,6 @@ export interface Company {
   name: string;
   description: string;
   phone: string;
-  created_at: Date | null;
-  updated_at: Date | null;
+  created_at?: Date | null;
+  updated_at?: Date | null;
 }

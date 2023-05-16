@@ -18,4 +18,8 @@ export class CompanyService {
   deleteCompanySvc(id: number): Observable<Company> {
     return this.http.delete<Company>(`${this.API_URL}/${id}`);
   }
+
+  createCompanySvc(company: Company): Observable<Company> {
+    return this.http.post<Company>(`${this.API_URL}`, company);
+  }
 }
