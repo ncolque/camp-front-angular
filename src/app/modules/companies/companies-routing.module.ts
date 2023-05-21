@@ -13,6 +13,10 @@ const routes: Routes = [
     component: CreateEditCompanyComponent,
   },
   {
+    path: 'edit-company/:id',
+    component: CreateEditCompanyComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
   },

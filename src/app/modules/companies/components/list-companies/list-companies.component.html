@@ -7,8 +7,10 @@
   <li>{{ company.name }}</li>
   <li>{{ company.description }}</li>
   <li>{{ company.phone }}</li>
+  <li>{{ company.created_at | date : "short" }}</li>
+  <li>{{ company.updated_at | date : "short" }}</li>
   <span>
-    <button>Editar</button>
+    <button [routerLink]="['/company/edit-company', company.id]">Editar</button>
     <button (click)="deleteCompany(company.id!)">Eliminar</button>
   </span>
 </p>

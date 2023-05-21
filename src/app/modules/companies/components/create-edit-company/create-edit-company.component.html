@@ -1,5 +1,5 @@
 <p>{{ titulo }}</p>
-<form [formGroup]="formCompany" (ngSubmit)="createCompany()">
+<form [formGroup]="formCompany" (ngSubmit)="createEditCompany()">
   <div>
     <label for="">Nombre</label>
     <input type="text" formControlName="name" />
@@ -13,5 +13,5 @@
     <input type="text" formControlName="phone" />
   </div>
   <button [disabled]="formCompany.invalid" type="submit">Guardar</button>
-  <button type="button" routerLink="/">Cancelar</button>
+  <button type="button" [routerLink]="['/']">Cancelar</button>
 </form>

@@ -22,4 +22,12 @@ export class CompanyService {
   createCompanySvc(company: Company): Observable<Company> {
     return this.http.post<Company>(`${this.API_URL}`, company);
   }
+
+  findCompanySvc(): Observable<CompanyResponse> {
+    return this.http.get<CompanyResponse>(`${this.API_URL}`);
+  }
+
+  updateCompanySvc(id: number, company: Company): Observable<Company> {
+    return this.http.put<Company>(`${this.API_URL}/${id}`, company);
+  }
 }
