@@ -7,8 +7,7 @@ import { Company, CompanyResponse } from '../interfaces/company';
   providedIn: 'root',
 })
 export class CompanyService {
-  /* private API_URL = 'http://127.0.0.1:5001/api/companies'; */
-  private API_URL = 'http://localhost:8080/companies';
+  private API_URL = 'http://127.0.0.1:5001/api/companies';
 
   constructor(private http: HttpClient) {}
 
